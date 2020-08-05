@@ -1,8 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import HomePage from './homePage'
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <App />,
+  <React.StrictMode>
+    <BrowserRouter>
+      <HomePage />,
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
-)
+);

@@ -1,21 +1,8 @@
 import React from 'react'
 import Button from './button.js'
+import { Switch, Route } from 'react-router-dom';
 
-class App extends React.Component {
-
-  // state =
-  //   {
-  //     liked: "like"
-  //   }
-  //
-  // likeButton = e => {
-  //   e.preventDefault()
-  //   if (this.state.liked == "like") {
-  //   this.setState({liked: "liked"})
-  // } else {
-  //   this.setState({liked: "like"})
-  // }
-  // }
+class homePage extends React.Component {
 
   render() {
     const artistName = 'Red Hot Chili Peppers'
@@ -61,16 +48,12 @@ class App extends React.Component {
     ]
 
     return (
-      // this.topSongs.map(st => <button id={st.id}>LIKE<this.setState({ [st.id]: e.target})
       <main className="main">
-
         <h1>{artistName}</h1>
         <p>{artistInfo}</p>
         <h2>Most Popular Songs</h2>
         <ol>
             {topSongs.map(item => {
-              // console.log(this.state)
-              // this.setState({ [document.getElementById("item.id")]: document.getElementById('item.id')})
               return <li key={item.id}>{item.name}<Button/></li>
             })}
         </ol>
@@ -89,4 +72,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default homePage

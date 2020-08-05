@@ -22,7 +22,9 @@ module.exports = {
     hot: true,
     open: true,
     port: 8000,
-    watchContentBase: true
+    host: '0.0.0.0', // server is accessible externally
+    historyApiFallback: true, //serve a previous page on a 404 error
+    watchContentBase: true // watch for changes to static files
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
