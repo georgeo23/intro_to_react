@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from './button.js'
-import { Switch, Route } from 'react-router-dom';
 
-class homePage extends React.Component {
-
+class HomePage extends React.Component {
+  componentDidMount(){
+    document.title = "Home Page"
+  }
   render() {
     const artistName = 'Red Hot Chili Peppers'
     const topSongs = [
@@ -72,4 +73,4 @@ class homePage extends React.Component {
   }
 }
 
-export default homePage
+export default HomePage
